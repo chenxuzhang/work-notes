@@ -3,12 +3,11 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Work Notes",
   description: "工作踩坑与实用备忘，拿来即用",
-  
-  // 对应 GitHub 仓库名
   base: '/work-notes/',
-
-  // 显示最近更新时间
   lastUpdated: true,
+
+  // 默认暗黑主题（Vite 官网同款纯黑硬核风格）
+  appearance: 'dark',
 
   head: [
     ['link', { rel: 'icon', href: '/work-notes/logo.svg' }]
@@ -17,7 +16,6 @@ export default defineConfig({
   themeConfig: {
     logo: '/logo.svg',
 
-    // 开启本地即时搜索
     search: {
       provider: 'local',
       options: {
@@ -36,7 +34,6 @@ export default defineConfig({
       }
     },
 
-    // 顶部导航栏
     nav: [
       { text: '首页', link: '/' },
       { text: '🐛 踩坑排错', link: '/bugs/' },
@@ -44,7 +41,6 @@ export default defineConfig({
       { text: '📋 常用备忘', link: '/cheatsheets/' }
     ],
 
-    // 左侧分类侧边栏
     sidebar: {
       '/bugs/': [
         {
