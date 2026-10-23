@@ -1,7 +1,6 @@
 {
   "name": "work-notes",
   "version": "1.0.0",
-  "type": "module",
   "description": "工作踩坑与实用备忘，拿来即用",
   "scripts": {
     "docs:dev": "vitepress dev docs",
@@ -9,6 +8,6 @@
     "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
-    "vitepress": "^1.6.4"
+    "vitepress": "^1.6.3"
   }
 }

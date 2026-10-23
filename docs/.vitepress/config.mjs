@@ -3,19 +3,15 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Work Notes",
   description: "工作踩坑与实用备忘，拿来即用",
+  
+  // 对应 GitHub 仓库名
   base: '/work-notes/',
+
+  // 显示最近更新时间（依赖 git commit）
   lastUpdated: true,
 
-  // 默认暗黑主题（Vite 官网同款纯黑硬核风格）
-  appearance: 'dark',
-
-  head: [
-    ['link', { rel: 'icon', href: '/work-notes/logo.svg' }]
-  ],
-
   themeConfig: {
-    logo: '/logo.svg',
-
+    // 开启本地即时搜索（按 Ctrl+K 或 Cmd+K 秒查）
     search: {
       provider: 'local',
       options: {
@@ -34,6 +30,7 @@ export default defineConfig({
       }
     },
 
+    // 顶部导航栏
     nav: [
       { text: '首页', link: '/' },
       { text: '🐛 踩坑排错', link: '/bugs/' },
@@ -41,13 +38,13 @@ export default defineConfig({
       { text: '📋 常用备忘', link: '/cheatsheets/' }
     ],
 
+    // 左侧分类侧边栏
     sidebar: {
       '/bugs/': [
         {
           text: '踩坑排错',
           items: [
-            { text: '排错索引与示例', link: '/bugs/' },
-            { text: 'MySQL 超时排查', link: '/bugs/example-mysql-timeout' }
+            { text: '排错索引与示例', link: '/bugs/' }
           ]
         }
       ],
@@ -63,13 +60,13 @@ export default defineConfig({
         {
           text: '常用备忘',
           items: [
-            { text: '常用命令速查', link: '/cheatsheets/' },
-            { text: 'Docker 常用命令', link: '/cheatsheets/docker-common' }
+            { text: '常用命令速查', link: '/cheatsheets/' }
           ]
         }
       ]
     },
 
+    // 右侧大纲导航
     outline: {
       level: [2, 3],
       label: '本页大纲'
