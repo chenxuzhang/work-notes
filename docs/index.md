@@ -7,7 +7,7 @@ hero:
   tagline: "随时记、随时搜，把踩过的坑和常用的配置记下来，方便下次直接抄。"
   image:
     src: /logo.svg
-    alt: Work Notes
+    alt: Work Notes Logo
   actions:
     - theme: brand
       text: 🐛 查阅排错记录

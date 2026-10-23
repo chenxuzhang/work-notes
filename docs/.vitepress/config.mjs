@@ -7,11 +7,17 @@ export default defineConfig({
   // 对应 GitHub 仓库名
   base: '/work-notes/',
 
-  // 显示最近更新时间（依赖 git commit）
+  // 显示最近更新时间
   lastUpdated: true,
 
+  head: [
+    ['link', { rel: 'icon', href: '/work-notes/logo.svg' }]
+  ],
+
   themeConfig: {
-    // 开启本地即时搜索（按 Ctrl+K 或 Cmd+K 秒查）
+    logo: '/logo.svg',
+
+    // 开启本地即时搜索
     search: {
       provider: 'local',
       options: {
@@ -44,7 +50,8 @@ export default defineConfig({
         {
           text: '踩坑排错',
           items: [
-            { text: '排错索引与示例', link: '/bugs/' }
+            { text: '排错索引与示例', link: '/bugs/' },
+            { text: 'MySQL 超时排查', link: '/bugs/example-mysql-timeout' }
           ]
         }
       ],
@@ -60,13 +67,13 @@ export default defineConfig({
         {
           text: '常用备忘',
           items: [
-            { text: '常用命令速查', link: '/cheatsheets/' }
+            { text: '常用命令速查', link: '/cheatsheets/' },
+            { text: 'Docker 常用命令', link: '/cheatsheets/docker-common' }
           ]
         }
       ]
     },
 
-    // 右侧大纲导航
     outline: {
       level: [2, 3],
       label: '本页大纲'

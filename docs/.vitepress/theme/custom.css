@@ -1,53 +1,48 @@
 :root {
-  /* Vite 标志性紫青极客渐变品牌色 */
-  --vp-c-brand-1: #9333ea;
-  --vp-c-brand-2: #a855f7;
-  --vp-c-brand-3: #c084fc;
-  --vp-c-brand-soft: rgba(147, 51, 234, 0.12);
+  /* Vite 官方标志性品牌色 (Indigo / Purple) */
+  --vp-c-brand-1: #646cff;
+  --vp-c-brand-2: #747bff;
+  --vp-c-brand-3: #535bf2;
+  --vp-c-brand-soft: rgba(100, 108, 255, 0.14);
 
-  /* 首页大标题极光渐变 */
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(
-    120deg,
-    #bd34fe 20%,
-    #41d1ff 80%
-  );
-
-  /* 首页背景光晕效果 */
-  --vp-home-hero-image-background-image: linear-gradient(
-    -45deg,
-    #bd34fe 50%,
-    #47caff 50%
-  );
-  --vp-home-hero-image-filter: blur(48px);
+  --vp-home-hero-name-background: linear-gradient(135deg, #bd34fe 15%, #41d1ff 85%);
+  --vp-home-hero-image-background-image: linear-gradient(135deg, #bd34fe 30%, #41d1ff 90%);
+  --vp-home-hero-image-filter: blur(56px);
 }
 
 .dark {
-  --vp-c-brand-1: #a855f7;
-  --vp-c-brand-2: #c084fc;
-  --vp-c-brand-3: #d8b4fe;
-  --vp-c-brand-soft: rgba(168, 85, 247, 0.16);
-
-  --vp-home-hero-image-filter: blur(60px);
+  --vp-c-brand-1: #747bff;
+  --vp-c-brand-2: #8a91ff;
+  --vp-c-brand-3: #a5abff;
+  --vp-c-brand-soft: rgba(116, 123, 255, 0.16);
+  --vp-home-hero-image-filter: blur(64px);
 }
 
-/* 首页卡片边框轻微荧光质感 */
-.VPFeature {
-  border: 1px solid var(--vp-c-bg-soft) !important;
-  transition: all 0.3s ease !important;
+/* 强行命中 Hero Title 渐变文字，不给缓存和继承漏掉的机会 */
+.VPHero .name {
+  background: linear-gradient(135deg, #bd34fe 15%, #41d1ff 85%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
 }
 
-.VPFeature:hover {
-  border-color: var(--vp-c-brand-1) !important;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px -4px rgba(189, 52, 254, 0.12);
-}
-
-/* 按钮微调更加饱满 */
+/* 强行命中主按钮紫色渐变 */
 .VPButton.brand {
-  background: linear-gradient(90deg, #9333ea, #6366f1) !important;
-  border-color: transparent !important;
+  background: linear-gradient(90deg, #bd34fe, #646cff) !important;
+  border: none !important;
+  color: #ffffff !important;
 }
 .VPButton.brand:hover {
-  background: linear-gradient(90deg, #a855f7, #818cf8) !important;
+  background: linear-gradient(90deg, #c74dfd, #7c83ff) !important;
+}
+
+/* 首页卡片悬停极客发光动效 */
+.VPFeature {
+  transition: all 0.25s ease !important;
+  border: 1px solid var(--vp-c-bg-soft) !important;
+}
+.VPFeature:hover {
+  border-color: #bd34fe !important;
+  box-shadow: 0 10px 30px -10px rgba(189, 52, 254, 0.3) !important;
+  transform: translateY(-2px);
 }
