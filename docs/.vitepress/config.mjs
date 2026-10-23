@@ -35,7 +35,8 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: '🐛 踩坑排错', link: '/bugs/' },
       { text: '💡 方案实现', link: '/solutions/' },
-      { text: '📋 常用备忘', link: '/cheatsheets/' }
+      { text: '📋 常用备忘', link: '/cheatsheets/' },
+      { text: '🔬 原理剖析', link: '/internals/' }
     ],
 
     // 左侧分类侧边栏
@@ -61,6 +62,21 @@ export default defineConfig({
           text: '常用备忘',
           items: [
             { text: '常用命令速查', link: '/cheatsheets/' }
+          ]
+        }
+      ],
+      '/internals/': [
+        {
+          text: '原理与源码剖析',
+          items: [
+            { text: '分类索引', link: '/internals/' }
+          ]
+        },
+        {
+          text: 'OpenCode v1.18.12',
+          items: [
+            { text: '上下文压缩：何时触发', link: '/internals/opencode-v1.18.12/opencode-v1.18.12-compaction' },
+            { text: '上下文压缩：保留什么', link: '/internals/opencode-v1.18.12/opencode-v1.18.12-compaction-retention' }
           ]
         }
       ]

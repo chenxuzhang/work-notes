@@ -26,4 +26,7 @@ features:
   - icon: 📋
     title: 常用备忘 & SOP
     details: 整理 Docker、Git、Linux、Nginx 等平时容易遗忘的高频命令与配置。
+  - icon: 🔬
+    title: 原理与源码剖析
+    details: 基于特定版本源码，拆解工具与框架的内部机制、执行流程和边界条件。
 ---
