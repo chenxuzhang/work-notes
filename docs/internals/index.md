@@ -4,5 +4,5 @@
 
 ## OpenCode v1.18.12
 
-- [上下文压缩：何时触发](./opencode-v1.18.12/opencode-v1.18.12-compaction.md)
-- [上下文压缩：保留什么](./opencode-v1.18.12/opencode-v1.18.12-compaction-retention.md)
+- [`opencode run` 会话压缩：何时触发](./opencode-v1.18.12/opencode-v1.18.12-compaction.md)
+- [`opencode run` 会话压缩：哪些保留，哪些摘要](./opencode-v1.18.12/opencode-v1.18.12-run-compaction-retention.md)

@@ -75,8 +75,8 @@ export default defineConfig({
         {
           text: 'OpenCode v1.18.12',
           items: [
-            { text: '上下文压缩：何时触发', link: '/internals/opencode-v1.18.12/opencode-v1.18.12-compaction' },
-            { text: '上下文压缩：保留什么', link: '/internals/opencode-v1.18.12/opencode-v1.18.12-compaction-retention' }
+            { text: 'opencode run 会话压缩：何时触发', link: '/internals/opencode-v1.18.12/opencode-v1.18.12-compaction' },
+            { text: 'opencode run 会话压缩：哪些保留，哪些摘要', link: '/internals/opencode-v1.18.12/opencode-v1.18.12-run-compaction-retention' }
           ]
         }
       ]
